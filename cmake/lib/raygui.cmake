@@ -12,6 +12,6 @@ if (NOT raygui_FOUND)
         GIT_TAG 4.0
     )
     FetchContent_MakeAvailable(raygui)
-    include_directories(${raygui_SOURCE_DIR})
-    include_directories(${raygui_SOURCE_DIR}/src)
+    include_directories(SYSTEM ${raygui_SOURCE_DIR})
+    include_directories(SYSTEM ${raygui_SOURCE_DIR}/src)
 endif()

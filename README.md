@@ -12,6 +12,8 @@ It is an [astar algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm), t
 
 ![astar](resources/Screenshot_20240128_093812.png)
 
+![astar](resources/Screenshot_20240213_000512.png)
+
 # Features
 
 * [x] Header-only library C++20

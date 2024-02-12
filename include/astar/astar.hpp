@@ -1,3 +1,8 @@
+/*
+ * Header only library of A* algorithm by Bensuperpc
+ * MIT License
+ */
+
 #pragma once
 
 #include <algorithm>

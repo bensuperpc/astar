@@ -9,7 +9,7 @@
 
 static constexpr int64_t multiplier = 4;
 static constexpr int64_t minRange = 16;
-static constexpr int64_t maxRange = 256;
+static constexpr int64_t maxRange = 1024;
 static constexpr int64_t minThreadRange = 1;
 static constexpr int64_t maxThreadRange = 1;
 static constexpr int64_t repetitions = 1;

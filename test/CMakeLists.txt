@@ -14,10 +14,19 @@ endif()
 
 
 function(test_bench_generator TEST_BENCH_NAME IS_TEST ADD_TO_TEST)
+
+  set(SOURCES
+    "source/generator/generator.cpp"
+    )
+  
+  set(HEADERS
+    "source/generator/generator.hpp"
+    )
+
   if (IS_TEST)
-    add_executable("${TEST_BENCH_NAME}" "source/test/${TEST_BENCH_NAME}.cpp" source/generator/generator.cpp source/generator/generator.hpp)
+    add_executable("${TEST_BENCH_NAME}" "source/test/${TEST_BENCH_NAME}.cpp" ${SOURCES} ${HEADERS})
   else()
-    add_executable("${TEST_BENCH_NAME}" "source/benchmark/${TEST_BENCH_NAME}.cpp" source/generator/generator.cpp source/generator/generator.hpp)
+    add_executable("${TEST_BENCH_NAME}" "source/benchmark/${TEST_BENCH_NAME}.cpp" ${SOURCES} ${HEADERS})
   endif()
 
 
@@ -74,7 +83,8 @@ if(NOT WIN32)
 
   test_bench_generator(astar_test true true)
   test_bench_generator(astar_bench false true)
-  test_bench_generator(path_finder false false)
+  test_bench_generator(path_finder_compare false false)
+  test_bench_generator(path_finder_visual false false)
 endif()
 
 # ---- End-of-file commands ----
